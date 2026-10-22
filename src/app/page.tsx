@@ -5,16 +5,18 @@ import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
 import { ProjectsSection } from '@/components/ProjectsSection';
 import { ResearchSection } from '@/components/ResearchSection';
-import { HackathonsSection } from '@/components/HackathonsSection';
-import { ExperienceSection } from '@/components/ExperienceSection';
+import { MilestonesSection } from '@/components/MilestonesSection';
 import { SkillsMatrix } from '@/components/SkillsMatrix';
 import { ContactSection } from '@/components/ContactSection';
 import { Footer } from '@/components/Footer';
 import { TerminalEmulator } from '@/components/TerminalEmulator';
-import { Terminal, Command } from 'lucide-react';
+import { SmoothScroll } from '@/components/SmoothScroll';
+import { Preloader } from '@/components/Preloader';
+import { Terminal } from 'lucide-react';
 
 export default function Home() {
   const [isTerminalOpen, setIsTerminalOpen] = useState(false);
+  const [isPreloaded, setIsPreloaded] = useState(false);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -33,44 +35,59 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#050508] text-[#f4f4f6] flex flex-col selection:bg-[#ff6b00] selection:text-black">
-      {/* Top Header */}
-      <Header onOpenTerminal={() => setIsTerminalOpen(true)} />
+    <SmoothScroll>
+      {/* ─── SLEEK 1.5-SECOND PRELOADER ENTRANCE OVERLAY ──── */}
+      <Preloader onComplete={() => setIsPreloaded(true)} />
 
-      {/* Main Content Flow */}
-      <main className="flex-1">
-        <Hero onOpenTerminal={() => setIsTerminalOpen(true)} />
-        <ProjectsSection />
-        <ResearchSection />
-        <HackathonsSection />
-        <ExperienceSection />
-        <SkillsMatrix />
-        <ContactSection />
-      </main>
+      <div className="min-h-screen bg-[#F4F4F0] text-[#0E0E10] flex flex-col selection:bg-black selection:text-white">
+        {/* Top Header */}
+        <Header onOpenTerminal={() => setIsTerminalOpen(true)} />
 
-      {/* Footer */}
-      <Footer />
+        {/* Main Content Flow */}
+        <main className="flex-1">
+          {/* Hero with mouse-dampened spotlight & staggered upward mask reveals */}
+          <Hero onOpenTerminal={() => setIsTerminalOpen(true)} isReady={isPreloaded} />
 
-      {/* Floating CLI Mode Trigger */}
-      <div className="fixed bottom-6 right-6 z-40 hidden sm:block">
-        <button
-          onClick={() => setIsTerminalOpen(true)}
-          className="flex items-center gap-2 px-3.5 py-2 rounded-full bg-[#0d0f1a]/95 hover:bg-[#ff6b00] text-[#ff6b00] hover:text-black font-mono text-xs font-bold border border-[#ff6b00]/60 hover:border-[#ff6b00] shadow-[0_0_20px_rgba(255,107,0,0.3)] transition-all cursor-pointer backdrop-blur-md group"
-          title="Open Terminal (Shortcut: ⌘K or ~)"
-        >
-          <Terminal className="w-4 h-4 text-[#ff6b00] group-hover:text-black" />
-          <span>TERMINAL CLI</span>
-          <span className="px-1.5 py-0.5 rounded bg-[#161a29] group-hover:bg-black/20 text-[10px] text-[#9ba1b6] group-hover:text-black font-mono border border-[#2b3149] group-hover:border-transparent">
-            ⌘K
-          </span>
-        </button>
+          {/* 3D Perspective Curved Arc Carousel for Projects */}
+          <ProjectsSection />
+
+          {/* Peer-Reviewed Algorithmic Fairness Research */}
+          <ResearchSection />
+
+          {/* Scroll-Pinned Milestone Transitions with Monochrome Displacement */}
+          <MilestonesSection />
+
+          {/* Technical Skills & Proficiency Matrix */}
+          <SkillsMatrix />
+
+          {/* Direct Communication & Contact */}
+          <ContactSection />
+        </main>
+
+        {/* Footer */}
+        <Footer />
+
+        {/* Floating CLI Mode Trigger in Monochrome */}
+        <div className="fixed bottom-6 right-6 z-40 hidden sm:block">
+          <button
+            onClick={() => setIsTerminalOpen(true)}
+            className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#0E0E10]/95 hover:bg-black text-white font-mono text-xs font-bold border border-white/20 shadow-2xl transition-all cursor-pointer backdrop-blur-md group"
+            title="Open Terminal (Shortcut: ⌘K or ~)"
+          >
+            <Terminal className="w-4 h-4 text-white" />
+            <span>TERMINAL CLI</span>
+            <span className="px-1.5 py-0.5 rounded-full bg-white/20 text-[10px] text-white font-mono">
+              ⌘K
+            </span>
+          </button>
+        </div>
+
+        {/* Interactive Command Terminal Modal */}
+        <TerminalEmulator
+          isOpen={isTerminalOpen}
+          onClose={() => setIsTerminalOpen(false)}
+        />
       </div>
-
-      {/* Interactive Command Terminal Modal */}
-      <TerminalEmulator
-        isOpen={isTerminalOpen}
-        onClose={() => setIsTerminalOpen(false)}
-      />
-    </div>
+    </SmoothScroll>
   );
 }

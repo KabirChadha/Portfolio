@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Terminal, ExternalLink, Menu, X, Cpu, Activity } from 'lucide-react';
+import { Terminal, Menu, X, Activity } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
@@ -44,41 +44,40 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTerminal }) => {
   const navLinks = [
     { label: '// 01. PROJECTS', href: '#projects' },
     { label: '// 02. RESEARCH', href: '#research' },
-    { label: '// 03. HACKATHONS', href: '#hackathons' },
-    { label: '// 04. EXPERIENCE', href: '#experience' },
-    { label: '// 05. SKILLS', href: '#skills' },
-    { label: '// 06. CONTACT', href: '#contact' },
+    { label: '// 03. MILESTONES', href: '#milestones' },
+    { label: '// 04. SKILLS', href: '#skills' },
+    { label: '// 05. CONTACT', href: '#contact' },
   ];
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-[#050508]/90 backdrop-blur-md border-b border-[#1f2438] shadow-[0_4px_20px_rgba(0,0,0,0.6)]'
-          : 'bg-transparent border-b border-[#161824]'
+          ? 'bg-[#F4F4F0]/90 backdrop-blur-md border-b border-black/8 shadow-sm'
+          : 'bg-transparent border-b border-black/5'
       }`}
     >
       {/* Top micro status bar */}
-      <div className="hidden lg:flex items-center justify-between px-6 py-1 bg-[#08090f] border-b border-[#141622] text-[11px] font-mono text-[#71768c]">
+      <div className="hidden lg:flex items-center justify-between px-6 py-1 bg-[#EBEBE6] border-b border-black/5 text-[11px] font-mono text-[#4A4A50]">
         <div className="flex items-center gap-4">
-          <span className="flex items-center gap-1.5 text-[#ff6b00]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#ff6b00] animate-pulse"></span>
+          <span className="flex items-center gap-1.5 font-bold text-[#0E0E10]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#0E0E10] animate-pulse"></span>
             SYS_ONLINE
           </span>
-          <span className="text-[#3b4158]">|</span>
+          <span className="text-black/20">|</span>
           <span>KERNEL: {PERSONAL_INFO.kernelVersion}</span>
-          <span className="text-[#3b4158]">|</span>
+          <span className="text-black/20">|</span>
           <span className="flex items-center gap-1">
-            <Activity className="w-3 h-3 text-[#ff6b00]" />
+            <Activity className="w-3 h-3 text-[#0E0E10]" />
             LATENCY: 14ms
           </span>
-          <span className="text-[#3b4158]">|</span>
-          <span>ZERO_LEAKAGE: VERIFIED</span>
+          <span className="text-black/20">|</span>
+          <span className="font-semibold text-[#0E0E10]">ZERO_LEAKAGE: 0.00e+00 VERIFIED</span>
         </div>
         <div className="flex items-center gap-4">
-          <span className="text-[#9ba1b6]">{currentTime || '22:30:00 IST'}</span>
-          <span className="text-[#3b4158]">|</span>
-          <span className="text-[#ff7a00]">VERCEL_EDGE_READY</span>
+          <span className="text-[#0E0E10] font-medium">{currentTime || '22:30:00 IST'}</span>
+          <span className="text-black/20">|</span>
+          <span className="text-[#4A4A50]">NEW DELHI / CHENNAI</span>
         </div>
       </div>
 
@@ -88,20 +87,20 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTerminal }) => {
           {/* Logo / Terminal prompt branding */}
           <a
             href="#"
-            className="flex items-center gap-2 group text-left focus:outline-none"
+            className="flex items-center gap-2.5 group text-left focus:outline-none"
             aria-label="Kabir Singh Chadha Portfolio"
           >
-            <div className="w-8 h-8 rounded bg-[#0f111a] border border-[#ff6b00]/40 flex items-center justify-center text-[#ff6b00] group-hover:border-[#ff6b00] group-hover:shadow-[0_0_12px_rgba(255,107,0,0.4)] transition-all">
+            <div className="w-8 h-8 rounded-lg bg-white border border-black/10 flex items-center justify-center text-[#0E0E10] shadow-sm group-hover:border-black/30 transition-all">
               <Terminal className="w-4 h-4" />
             </div>
             <div>
-              <div className="flex items-center gap-1.5 font-mono text-sm font-bold tracking-tight text-[#f4f4f6]">
+              <div className="flex items-center gap-1 font-mono text-sm font-extrabold tracking-tight text-[#0E0E10]">
                 <span>kabir</span>
-                <span className="text-[#ff6b00]">@</span>
-                <span className="text-[#9ba1b6]">systems</span>
-                <span className="text-[#ff6b00] animate-blink font-black">:~#</span>
+                <span className="text-[#8E8E93]">@</span>
+                <span>portfolio</span>
+                <span className="text-[#0E0E10] animate-blink font-black">:~#</span>
               </div>
-              <div className="text-[10px] font-mono text-[#71768c] -mt-0.5 tracking-wider hidden sm:block">
+              <div className="text-[10px] font-mono text-[#8E8E93] -mt-0.5 tracking-wider hidden sm:block">
                 CSE_AIML_SRMIST_KTR
               </div>
             </div>
@@ -113,7 +112,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTerminal }) => {
               <a
                 key={link.label}
                 href={link.href}
-                className="px-2.5 py-1 text-xs font-mono text-[#9ba1b6] hover:text-[#ff6b00] hover:bg-[#121420] rounded border border-transparent hover:border-[#1f2438] transition-all"
+                className="px-3 py-1.5 text-xs font-mono text-[#4A4A50] hover:text-[#0E0E10] hover:bg-black/5 rounded-md transition-all font-medium"
               >
                 {link.label}
               </a>
@@ -125,10 +124,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTerminal }) => {
             {onOpenTerminal && (
               <button
                 onClick={onOpenTerminal}
-                className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded bg-[#10121d] hover:bg-[#ff6b00] text-[#ff6b00] hover:text-black font-mono text-xs font-semibold border border-[#ff6b00]/50 hover:border-[#ff6b00] transition-all shadow-[0_0_10px_rgba(255,107,0,0.15)] cursor-pointer"
+                className="hidden sm:flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#0E0E10] hover:bg-black text-white font-mono text-xs font-bold transition-all shadow-sm cursor-pointer"
                 title="Launch Interactive Terminal"
               >
-                <Terminal className="w-3.5 h-3.5" />
+                <Terminal className="w-3.5 h-3.5 text-white" />
                 <span>CLI_MODE</span>
               </button>
             )}
@@ -137,7 +136,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTerminal }) => {
               href={PERSONAL_INFO.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded bg-[#0e1018] border border-[#1f2438] hover:border-[#ff6b00] text-[#9ba1b6] hover:text-[#ff6b00] transition-all"
+              className="p-2 rounded-lg bg-white border border-black/10 hover:border-black/30 text-[#0E0E10] transition-all shadow-sm"
               aria-label="GitHub Profile"
             >
               <GithubIcon className="w-4 h-4" />
@@ -147,7 +146,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTerminal }) => {
               href={PERSONAL_INFO.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded bg-[#0e1018] border border-[#1f2438] hover:border-[#ff6b00] text-[#9ba1b6] hover:text-[#ff6b00] transition-all"
+              className="p-2 rounded-lg bg-white border border-black/10 hover:border-black/30 text-[#0E0E10] transition-all shadow-sm"
               aria-label="LinkedIn Profile"
             >
               <LinkedinIcon className="w-4 h-4" />
@@ -156,7 +155,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTerminal }) => {
             {/* Mobile menu toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 rounded bg-[#0e1018] border border-[#1f2438] text-[#9ba1b6] hover:text-[#ff6b00]"
+              className="md:hidden p-2 rounded-lg bg-white border border-black/10 text-[#0E0E10]"
               aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -167,13 +166,13 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTerminal }) => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#090a10] border-b border-[#1f2438] px-4 pt-3 pb-5 space-y-2">
+        <div className="md:hidden bg-[#F4F4F0] border-b border-black/10 px-4 pt-3 pb-5 space-y-2">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-2 text-sm font-mono text-[#9ba1b6] hover:text-[#ff6b00] hover:bg-[#121420] rounded border border-transparent hover:border-[#1f2438]"
+              className="block px-3 py-2 text-sm font-mono text-[#2A2A2E] hover:text-[#0E0E10] hover:bg-black/5 rounded-md"
             >
               {link.label}
             </a>
@@ -184,7 +183,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTerminal }) => {
                 setMobileMenuOpen(false);
                 onOpenTerminal();
               }}
-              className="w-full mt-3 flex items-center justify-center gap-2 py-2 rounded bg-[#ff6b00] text-black font-mono text-xs font-bold"
+              className="w-full mt-3 flex items-center justify-center gap-2 py-2.5 rounded-lg bg-[#0E0E10] text-white font-mono text-xs font-bold"
             >
               <Terminal className="w-4 h-4" />
               <span>LAUNCH TERMINAL CLI</span>

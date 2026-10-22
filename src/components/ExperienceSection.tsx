@@ -1,23 +1,23 @@
 'use client';
 
 import React from 'react';
-import { Briefcase, Calendar, MapPin, ChevronRight, Terminal, Cpu } from 'lucide-react';
+import { Briefcase, Calendar, MapPin, ChevronRight } from 'lucide-react';
 import { INTERNSHIP_EXPERIENCES } from '../data/portfolioData';
 
 export const ExperienceSection: React.FC = () => {
   return (
-    <section id="experience" className="py-20 sm:py-28 relative border-b border-[#161824] bg-[#07080e]/40">
+    <section id="experience" className="py-20 sm:py-28 relative border-b border-black/8 bg-[#F4F4F0] text-[#0E0E10]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="space-y-2 mb-10 text-left">
-          <div className="flex items-center gap-2 font-mono text-xs text-[#ff6b00]">
+          <div className="flex items-center gap-2 font-mono text-xs text-[#0E0E10] font-bold">
             <Briefcase className="w-3.5 h-3.5" />
             <span>// 04. ENGINEERING_EXPERIENCE</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold font-mono text-[#f4f4f6] tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-extrabold font-mono text-[#0E0E10] tracking-tight">
             ENGINEERING & INDUSTRY INTERNSHIPS
           </h2>
-          <p className="text-sm sm:text-base text-[#9ba1b6] max-w-3xl">
+          <p className="text-sm sm:text-base text-[#4A4A50] max-w-3xl leading-relaxed">
             Software engineering, intelligent AI systems development, and industrial operations across online and on-site engineering roles.
           </p>
         </div>
@@ -27,48 +27,48 @@ export const ExperienceSection: React.FC = () => {
           {INTERNSHIP_EXPERIENCES.map((exp, idx) => (
             <div
               key={exp.id}
-              className="rounded-xl bg-[#090a12] border border-[#1b1f30] hover:border-[#ff6b00]/70 transition-all p-6 sm:p-8 space-y-4 shadow-lg"
+              className="rounded-2xl bg-white border border-black/10 hover:border-black/30 transition-all p-6 sm:p-8 space-y-4 shadow-editorial shadow-editorial-hover"
             >
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#161928] pb-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-black/8 pb-4">
                 <div>
-                  <div className="flex items-center gap-2 font-mono text-xs text-[#ff6b00]">
-                    <span className="w-2 h-2 rounded-full bg-[#ff6b00]"></span>
+                  <div className="flex items-center gap-2 font-mono text-xs text-[#0E0E10] font-bold">
+                    <span className="w-2 h-2 rounded-full bg-[#0E0E10]"></span>
                     <span>EXP_0{idx + 1} // {exp.type.toUpperCase()}</span>
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold font-mono text-[#f4f4f6] mt-1">
+                  <h3 className="text-xl sm:text-2xl font-bold font-mono text-[#0E0E10] mt-1">
                     {exp.role}
                   </h3>
-                  <div className="text-sm font-mono text-[#ff7a00] font-semibold">
+                  <div className="text-sm font-mono text-[#4A4A50] font-semibold">
                     {exp.organization}
                   </div>
                 </div>
 
-                <div className="flex flex-wrap sm:flex-col items-start sm:items-end gap-2 text-xs font-mono text-[#71768c]">
-                  <span className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#0e101a] border border-[#1c2134] text-[#d4d4d8]">
-                    <Calendar className="w-3.5 h-3.5 text-[#ff6b00]" />
+                <div className="flex flex-wrap sm:flex-col items-start sm:items-end gap-2 text-xs font-mono text-[#8E8E93]">
+                  <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F4F4F0] border border-black/8 text-[#0E0E10] font-semibold">
+                    <Calendar className="w-3.5 h-3.5 text-[#0E0E10]" />
                     {exp.period}
                   </span>
-                  <span className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#0e101a] border border-[#1c2134]">
-                    <MapPin className="w-3.5 h-3.5 text-[#71768c]" />
+                  <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F4F4F0] border border-black/8">
+                    <MapPin className="w-3.5 h-3.5 text-[#8E8E93]" />
                     {exp.location}
                   </span>
                 </div>
               </div>
 
               {/* Summary */}
-              <p className="text-xs sm:text-sm text-[#9ba1b6] leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#4A4A50] leading-relaxed">
                 {exp.summary}
               </p>
 
               {/* Key Deliverables Bullet Points */}
               <div className="space-y-2 pt-1">
-                <span className="text-[10px] font-mono font-bold tracking-wider text-[#71768c] uppercase block">
+                <span className="text-[10px] font-mono font-bold tracking-wider text-[#8E8E93] uppercase block">
                   // QUANTIFIABLE CONTRIBUTIONS & SYSTEM DELIVERABLES
                 </span>
-                <ul className="space-y-2 text-xs text-[#c4c7d4]">
+                <ul className="space-y-2 text-xs text-[#2A2A2E]">
                   {exp.keyAchievements.map((item, aIdx) => (
                     <li key={aIdx} className="flex items-start gap-2">
-                      <ChevronRight className="w-3.5 h-3.5 text-[#ff6b00] shrink-0 mt-0.5" />
+                      <ChevronRight className="w-3.5 h-3.5 text-[#0E0E10] shrink-0 mt-0.5" />
                       <span className="leading-relaxed">{item}</span>
                     </li>
                   ))}
@@ -80,10 +80,9 @@ export const ExperienceSection: React.FC = () => {
                 {exp.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="px-2.5 py-1 rounded text-[11px] font-mono bg-[#0e101b] border border-[#1c2136] text-[#d4d4d8]"
+                    className="px-3 py-1 rounded-full text-[11px] font-mono bg-[#EFEFEA] border border-black/6 text-[#2A2A2E]"
                   >
-                    <span className="text-[#ff6b00] mr-1">#</span>
-                    {tech}
+                    #{tech}
                   </span>
                 ))}
               </div>

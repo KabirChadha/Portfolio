@@ -1,23 +1,23 @@
 'use client';
 
 import React from 'react';
-import { Cpu, Terminal, Layers, ShieldCheck, Database, Cloud } from 'lucide-react';
+import { Cpu } from 'lucide-react';
 import { SKILL_GROUPS } from '../data/portfolioData';
 
 export const SkillsMatrix: React.FC = () => {
   return (
-    <section id="skills" className="py-20 sm:py-28 relative border-b border-[#161824]">
+    <section id="skills" className="py-20 sm:py-28 relative border-b border-black/8 bg-[#F4F4F0] text-[#0E0E10]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="space-y-2 mb-10 text-left">
-          <div className="flex items-center gap-2 font-mono text-xs text-[#ff6b00]">
+          <div className="flex items-center gap-2 font-mono text-xs text-[#0E0E10] font-bold">
             <Cpu className="w-3.5 h-3.5" />
-            <span>// 05. TECHNICAL_CAPABILITIES</span>
+            <span>// 04. TECHNICAL_CAPABILITIES</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold font-mono text-[#f4f4f6] tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-extrabold font-mono text-[#0E0E10] tracking-tight">
             ENGINEERING SKILL MATRIX
           </h2>
-          <p className="text-sm sm:text-base text-[#9ba1b6] max-w-3xl">
+          <p className="text-sm sm:text-base text-[#4A4A50] max-w-3xl leading-relaxed">
             Proficiencies across system languages, quantitative machine learning pipelines, modern web frameworks, and cloud deployment runtimes.
           </p>
         </div>
@@ -27,45 +27,45 @@ export const SkillsMatrix: React.FC = () => {
           {SKILL_GROUPS.map((group, gIdx) => (
             <div
               key={group.category}
-              className="rounded-xl bg-[#090a12] border border-[#1b1f30] hover:border-[#ff6b00]/60 transition-all p-6 space-y-4 shadow-lg"
+              className="rounded-2xl bg-white border border-black/10 hover:border-black/30 transition-all p-6 sm:p-8 space-y-4 shadow-editorial"
             >
-              <div className="flex items-center justify-between border-b border-[#161928] pb-3">
+              <div className="flex items-center justify-between border-b border-black/8 pb-3">
                 <div>
-                  <span className="text-[10px] font-mono tracking-wider text-[#ff6b00] uppercase block">
+                  <span className="text-[10px] font-mono tracking-wider text-[#8E8E93] uppercase block font-bold">
                     // MATRIX_0{gIdx + 1}
                   </span>
-                  <h3 className="text-lg font-bold font-mono text-[#f4f4f6]">
+                  <h3 className="text-xl font-bold font-mono text-[#0E0E10]">
                     {group.category}
                   </h3>
                 </div>
-                <span className="text-xs font-mono text-[#71768c]">
+                <span className="text-xs font-mono text-[#8E8E93]">
                   [{group.terminalLabel}]
                 </span>
               </div>
 
-              <p className="text-xs text-[#71768c]">{group.description}</p>
+              <p className="text-xs text-[#4A4A50]">{group.description}</p>
 
               {/* Skills List with Proficiency Bars */}
-              <div className="space-y-3 pt-1">
+              <div className="space-y-3.5 pt-1">
                 {group.skills.map((skill) => (
-                  <div key={skill.name} className="space-y-1">
+                  <div key={skill.name} className="space-y-1.5">
                     <div className="flex items-center justify-between text-xs font-mono">
-                      <span className="text-[#d4d4d8] font-medium">{skill.name}</span>
+                      <span className="text-[#0E0E10] font-semibold">{skill.name}</span>
                       <div className="flex items-center gap-2">
-                        <span className="text-[10px] text-[#71768c] uppercase">
+                        <span className="text-[10px] text-[#8E8E93] uppercase">
                           {skill.level}
                         </span>
-                        <span className="text-[#ff6b00] font-bold text-xs">
+                        <span className="text-[#0E0E10] font-bold text-xs">
                           {skill.percentage}%
                         </span>
                       </div>
                     </div>
-                    {/* Meter bar */}
-                    <div className="w-full h-1.5 rounded-full bg-[#121422] overflow-hidden">
+                    {/* Minimalist Monochrome Bar */}
+                    <div className="w-full h-1.5 bg-[#EAEAE5] rounded-full overflow-hidden">
                       <div
-                        className="h-full rounded-full bg-gradient-to-r from-[#ff6b00] to-[#ffaa40] transition-all duration-500"
+                        className="h-full bg-[#0E0E10] rounded-full transition-all duration-700"
                         style={{ width: `${skill.percentage}%` }}
-                      ></div>
+                      />
                     </div>
                   </div>
                 ))}

@@ -22,12 +22,15 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Kabir Singh Chadha | AI Systems Engineer & Full-Stack Architect",
+  title: "Kabir Singh Chadha | 2nd-Year CSE (AI/ML) @ SRMIST Kattankulathur",
   description:
-    "Production portfolio of Kabir Singh Chadha. AI Systems Engineer specializing in zero-leakage quantitative ML pipelines, real-time distributed applications, and fair AI architectures. Author of published research on AI bias and mitigation.",
+    "2nd-year Computer Science Engineering student specializing in AI/ML at SRM Institute of Science and Technology, Kattankulathur, Chennai. Focused on building real-time full-stack applications, intelligent ML systems, and fair algorithmic architectures. Published author in peer-reviewed AI research.",
   keywords: [
     "Kabir Singh Chadha",
     "Kabir Chadha",
+    "SRMIST Kattankulathur",
+    "SRM Institute of Science and Technology",
+    "2nd Year CSE AIML",
     "AI Systems Engineer",
     "Machine Learning Engineer",
     "Quantitative ML",
@@ -45,9 +48,9 @@ export const metadata: Metadata = {
   publisher: "Kabir Singh Chadha",
   metadataBase: new URL("https://kabirchadha.dev"),
   openGraph: {
-    title: "Kabir Singh Chadha | AI Systems Engineer & Full-Stack Architect",
+    title: "Kabir Singh Chadha | 2nd-Year CSE (AI/ML) @ SRMIST Kattankulathur",
     description:
-      "Explore production-grade ML pipelines, real-time distributed web systems, and published research on algorithmic fairness.",
+      "2nd-year Computer Science Engineering student specializing in AI/ML at SRM Institute of Science and Technology, Kattankulathur, Chennai. Focused on building real-time full-stack applications, intelligent ML systems, and fair algorithmic architectures. Published author in peer-reviewed AI research.",
     url: "https://kabirchadha.dev",
     siteName: "Kabir Singh Chadha Portfolio",
     locale: "en_US",
@@ -55,9 +58,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kabir Singh Chadha | AI Systems Engineer & Full-Stack Architect",
+    title: "Kabir Singh Chadha | 2nd-Year CSE (AI/ML) @ SRMIST Kattankulathur",
     description:
-      "Production ML pipelines, real-time distributed architectures, and AI fairness research.",
+      "2nd-year Computer Science Engineering student specializing in AI/ML at SRM Institute of Science and Technology, Kattankulathur, Chennai. Published author in peer-reviewed AI research.",
   },
   robots: {
     index: true,

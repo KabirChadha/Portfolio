@@ -76,19 +76,20 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
 
         {/* Hero Title & Subtitle */}
         <div className="text-center max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#11131e] border border-[#ff6b00]/30 text-[#ff6b00] font-mono text-xs mb-6 glow-orange-sm">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#11131e] border border-[#ff6b00]/30 text-[#ff6b00] font-mono text-xs sm:text-sm mb-6 glow-orange-sm">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>AI SYSTEMS ENGINEER & FULL-STACK ARCHITECT</span>
+            <span>2nd-Year CSE (AI/ML) Undergraduate @ SRMIST Kattankulathur</span>
           </div>
 
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#f4f4f6] font-mono uppercase">
             Kabir Singh <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff6b00] via-[#ff851a] to-[#ffaa40]">Chadha</span>
           </h1>
 
-          <p className="mt-5 text-base sm:text-xl text-[#9ba1b6] max-w-3xl mx-auto leading-relaxed">
-            Engineering <span className="text-[#f4f4f6] font-semibold">zero-leakage quantitative ML pipelines</span>,{' '}
-            <span className="text-[#f4f4f6] font-semibold">real-time distributed web systems</span>, and{' '}
-            <span className="text-[#ff6b00] font-semibold">fair algorithmic architectures</span>. Author of published research on AI bias mitigation.
+          <p className="mt-5 text-base sm:text-lg lg:text-xl text-[#9ba1b6] max-w-3xl mx-auto leading-relaxed">
+            2nd-year Computer Science Engineering student specializing in{' '}
+            <span className="text-[#ff6b00] font-semibold">AI/ML</span> at{' '}
+            <span className="text-[#f4f4f6] font-semibold">SRM Institute of Science and Technology</span>, Kattankulathur, Chennai. Focused on building real-time full-stack applications, intelligent ML systems, and fair algorithmic architectures.{' '}
+            <span className="text-[#ff6b00] font-semibold">Published author</span> in peer-reviewed AI research.
           </p>
 
           {/* Quick Action CTAs */}

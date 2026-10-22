@@ -102,7 +102,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTerminal }) => {
                 <span className="text-[#ff6b00] animate-blink font-black">:~#</span>
               </div>
               <div className="text-[10px] font-mono text-[#71768c] -mt-0.5 tracking-wider hidden sm:block">
-                AI_SYSTEMS_ARCHITECT
+                CSE_AIML_SRMIST_KTR
               </div>
             </div>
           </a>

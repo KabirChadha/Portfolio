@@ -91,9 +91,9 @@ export const TerminalEmulator: React.FC<TerminalEmulatorProps> = ({ isOpen, onCl
         outputNode = (
           <div className="text-xs space-y-1 text-[#d4d4d8]">
             <p><span className="text-[#ff6b00] font-bold">Name:</span> Kabir Singh Chadha</p>
-            <p><span className="text-[#ff6b00] font-bold">Role:</span> AI Systems Engineer & Full-Stack Architect</p>
-            <p><span className="text-[#ff6b00] font-bold">Specialization:</span> Zero-leakage quantitative ML pipelines, real-time distributed platforms, and fair AI algorithms.</p>
-            <p><span className="text-[#ff6b00] font-bold">Publication:</span> "Bias and Fairness in Artificial Intelligence: Methods and Mitigation Strategies" (Shodh Sagar / ICAIIT)</p>
+            <p><span className="text-[#ff6b00] font-bold">Role:</span> 2nd Year B.Tech CSE (AI/ML) @ SRMIST KTR, Chennai</p>
+            <p><span className="text-[#ff6b00] font-bold">Focus:</span> Intelligent Systems, Full-Stack Architecture, Ethical AI & Fairness</p>
+            <p><span className="text-[#ff6b00] font-bold">Publication:</span> "Bias and Fairness in Artificial Intelligence: Methods and Mitigation Strategies" (JRPS / Shodh Sagar)</p>
             <p><span className="text-[#ff6b00] font-bold">Status:</span> [ONLINE] Open for High-Impact Software/ML Roles & Research Collaborations</p>
           </div>
         );

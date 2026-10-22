@@ -9,11 +9,11 @@ import {
 export const PERSONAL_INFO = {
   name: "Kabir Singh Chadha",
   handle: "kabirchadha",
-  title: "AI Systems Engineer & Full-Stack Architect",
-  tagline: "Engineering zero-leakage quantitative ML pipelines, real-time distributed web systems, and fair algorithmic architectures.",
+  title: "2nd-Year CSE (AI/ML) Undergraduate @ SRMIST Kattankulathur",
+  tagline: "2nd-year Computer Science Engineering student specializing in AI/ML at SRM Institute of Science and Technology, Kattankulathur, Chennai. Focused on building real-time full-stack applications, intelligent ML systems, and fair algorithmic architectures. Published author in peer-reviewed AI research.",
   status: "ACTIVE_SYSTEM_ONLINE",
   kernelVersion: "v2.6.4-prod",
-  location: "New Delhi, India / Remote",
+  location: "SRMIST Kattankulathur, Chennai / New Delhi, India",
   email: "chadhakabir77@gmail.com",
   github: "https://github.com/KabirChadha",
   githubDisplay: "github.com/KabirChadha",
@@ -21,10 +21,10 @@ export const PERSONAL_INFO = {
   linkedinDisplay: "linkedin.com/in/kabir-singh-chadha",
   bioTerminal: [
     "kabir@kernel:~$ whoami",
-    "> AI Systems Engineer & Full-Stack Architect specializing in high-reliability machine learning pipelines,",
-    "> quantitative financial forecasting with mathematically verified zero-leakage guarantees,",
-    "> and real-time distributed web platforms.",
-    "> Published researcher on algorithmic fairness and bias mitigation in AI systems.",
+    "> Name: Kabir Singh Chadha",
+    "> Role: 2nd Year B.Tech CSE (AI/ML) @ SRMIST KTR, Chennai",
+    "> Focus: Intelligent Systems, Full-Stack Architecture, Ethical AI & Fairness",
+    "> Published author in peer-reviewed AI research (JRPS / Shodh Sagar).",
   ],
   stats: [
     { label: "Production Systems", value: "4+", detail: "Full Stack & AI Platforms" },
@@ -536,7 +536,7 @@ export const SKILL_GROUPS: SkillGroup[] = [
 
 export const TERMINAL_COMMANDS: Record<string, string> = {
   help: "Available commands:\n  whoami      - Display engineer credentials and summary\n  projects    - List all 4 production projects with metrics\n  paper       - Display published research on AI Bias and Fairness\n  hackathons  - Show hackathon victories and award highlights\n  experience  - List engineering internships and deliverables\n  skills      - Output full engineering skill matrix\n  stack       - Print core technical stack\n  contact     - Display contact channels and email\n  clear       - Clear terminal output\n  sudo hire   - Print hiring recommendation and instant contact",
-  whoami: "Kabir Singh Chadha\nRole: AI Systems Engineer & Full-Stack Architect\nFocus: Zero-Leakage Quantitative ML, Real-Time Distributed Systems, Fair AI\nPublished: 'Bias and Fairness in Artificial Intelligence: Methods and Mitigation Strategies'\nStatus: [ONLINE] Open for High-Impact Roles & Research",
+  whoami: "Name: Kabir Singh Chadha\nRole: 2nd Year B.Tech CSE (AI/ML) @ SRMIST KTR, Chennai\nFocus: Intelligent Systems, Full-Stack Architecture, Ethical AI & Fairness\nPublished: 'Bias and Fairness in Artificial Intelligence: Methods and Mitigation Strategies'\nStatus: [ONLINE] Open for High-Impact Roles & Research",
   stack: "FRONTEND:  Next.js 16, React 19, TypeScript, Tailwind CSS v4\nML/AI:     Scikit-Learn, Pandas, NumPy, Ollama LLaMA, Fairlearn\nBACKEND:   Python, Node.js, Supabase Realtime, PostgreSQL RLS\nLOGISTICS: Leaflet, Plotly Graph Objects, Discrete Simulation",
   contact: "Email:    chadhakabir77@gmail.com\nGitHub:   https://github.com/KabirChadha (github.com/KabirChadha)\nLinkedIn: https://www.linkedin.com/in/kabir-singh-chadha-4b90a1363 (linkedin.com/in/kabir-singh-chadha)\nPaper:    https://doi.org/10.36676/jrps.v15.i3.1425\nLocation: New Delhi, India / Remote Available",
   "sudo hire": ">>> ACCESS GRANTED: HIGH-PRIORITY CANDIDATE <<<\nMatches requirements for: AI/ML Engineer, Full-Stack Architect, Quantitative Systems.\nDemonstrated capability in zero-leakage math pipelines, published academic research, and production hackathon wins.\nContact immediately: chadhakabir77@gmail.com"

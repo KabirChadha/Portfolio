@@ -157,15 +157,19 @@ export const TerminalEmulator: React.FC<TerminalEmulatorProps> = ({ isOpen, onCl
       case 'experience':
         outputNode = (
           <div className="space-y-2 text-xs">
-            <p className="text-[#ff6b00] font-bold">Internship & Engineering Experience:</p>
+            <p className="text-[#ff6b00] font-bold font-mono">OFFLINE INDUSTRIAL & ENGINEERING INTERNSHIPS:</p>
             {INTERNSHIP_EXPERIENCES.map((exp) => (
-              <div key={exp.id} className="p-2 rounded bg-[#0e101b] border border-[#1e2338]">
+              <div key={exp.id} className="p-2.5 rounded bg-[#0e101b] border border-[#1e2338] space-y-1">
                 <div className="flex items-center justify-between">
                   <span className="text-[#f4f4f6] font-semibold">{exp.role}</span>
-                  <span className="text-[10px] text-[#71768c]">{exp.period}</span>
+                  <span className="text-[10px] font-mono text-[#ff6b00]">{exp.period}</span>
                 </div>
-                <p className="text-[#ff6b00] text-[11px]">{exp.organization} ({exp.location})</p>
-                <p className="text-[#9ba1b6] text-[11px] mt-0.5">{exp.summary}</p>
+                <p className="text-[#ff7a00] text-[11px] font-mono">{exp.organization} — {exp.location}</p>
+                <ul className="text-[#9ba1b6] text-[11px] space-y-0.5 pl-2 border-l border-[#ff6b00]/30 mt-1">
+                  {exp.keyAchievements.map((item, idx) => (
+                    <li key={idx}>• {item}</li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>

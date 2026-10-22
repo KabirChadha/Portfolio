@@ -442,38 +442,36 @@ export const HACKATHON_WINS: HackathonWin[] = [
 
 export const INTERNSHIP_EXPERIENCES: InternshipExperience[] = [
   {
-    id: "ml-systems-intern",
-    role: "Machine Learning & AI Engineering Intern",
-    organization: "Advanced Technology & Data Systems Lab",
-    period: "2024 - 2025",
+    id: "h-nahata-power-intern",
+    role: "Engineering Intern",
+    organization: "H Nahata Power Private Limited",
+    period: "June 11, 2024 – June 21, 2024",
     location: "New Delhi, India",
-    type: "Internship",
+    type: "Offline Internship",
     summary:
-      "Engineered high-throughput predictive machine learning pipelines, conducted algorithmic fairness audits on production models, and integrated zero-leakage validation frameworks for time-series and tabular datasets.",
+      "Contributed to solar power generation and energy management system optimizations using control management strategies and explored Big Data and AI techniques for energy modeling.",
     keyAchievements: [
-      "Developed automated feature engineering and out-of-fold normalization pipelines, eliminating data leakage across temporal training/testing splits.",
-      "Conducted demographic parity and equalized odds evaluations on enterprise decision systems, reducing disparate impact ratios by 28%.",
-      "Optimized inference pipelines for ensemble models (Random Forest, Gradient Boosting), slashing median prediction latency by 45%.",
-      "Containerized model inference microservices with Docker and integrated automated regression test suites.",
+      "Contributed to solar power generation and energy management system optimizations using control management strategies.",
+      "Assisted in algorithmic improvements to enhance system efficiency and explored integrations of Big Data and AI techniques for energy modeling.",
+      "Demonstrated technical problem-solving and cross-functional engineering aptitude in an industrial setting.",
     ],
-    technologies: ["Python", "PyTorch", "Scikit-Learn", "Docker", "Pandas", "FastAPI", "Fairlearn"]
+    technologies: ["Solar Energy Systems", "Control Strategies", "Energy Optimization", "Big Data", "AI Modeling", "Industrial Automation"]
   },
   {
-    id: "fullstack-software-intern",
-    role: "Full-Stack Software Engineering Intern",
-    organization: "NextGen Cloud Platforms",
-    period: "2023 - 2024",
-    location: "Remote / Hybrid",
-    type: "Internship",
+    id: "gee-kay-industrial-intern",
+    role: "Industrial Trainee / Intern",
+    organization: "Gee Kay",
+    period: "2024",
+    location: "New Delhi, India (Offline)",
+    type: "Offline Industrial Training",
     summary:
-      "Designed and deployed responsive web applications and real-time backend microservices, optimizing database queries and implementing secure role-based authorization systems.",
+      "Gained hands-on exposure to industrial manufacturing and real-world engineering workflows, strengthening analytical problem-solving and foundational understanding of operational technical systems.",
     keyAchievements: [
-      "Built real-time event-driven interfaces with React, TypeScript, and WebSockets, delivering instantaneous UI updates under heavy traffic.",
-      "Designed PostgreSQL database schemas with Row Level Security (RLS) and indexed query optimization, improving response times by 35%.",
-      "Implemented CI/CD pipelines with automated linting, type-checking, and preview deployments on Vercel.",
-      "Collaborated with cross-functional product and design teams in fast-paced agile development cycles.",
+      "Gained practical hands-on exposure to industrial manufacturing and real-world engineering workflows.",
+      "Developed operational discipline, cross-team collaboration, and foundational understanding of organizational technical operations.",
+      "Strengthened core analytical problem-solving and industrial fundamentals.",
     ],
-    technologies: ["React", "TypeScript", "Next.js", "Node.js", "PostgreSQL", "Supabase", "Tailwind CSS"]
+    technologies: ["Industrial Manufacturing", "Engineering Workflows", "Operations Discipline", "Analytical Problem-Solving", "Process Optimization"]
   }
 ];
 
@@ -537,6 +535,7 @@ export const SKILL_GROUPS: SkillGroup[] = [
 export const TERMINAL_COMMANDS: Record<string, string> = {
   help: "Available commands:\n  whoami      - Display engineer credentials and summary\n  projects    - List all 4 production projects with metrics\n  paper       - Display published research on AI Bias and Fairness\n  hackathons  - Show hackathon victories and award highlights\n  experience  - List engineering internships and deliverables\n  skills      - Output full engineering skill matrix\n  stack       - Print core technical stack\n  contact     - Display contact channels and email\n  clear       - Clear terminal output\n  sudo hire   - Print hiring recommendation and instant contact",
   whoami: "Name: Kabir Singh Chadha\nRole: 2nd Year B.Tech CSE (AI/ML) @ SRMIST KTR, Chennai\nFocus: Intelligent Systems, Full-Stack Architecture, Ethical AI & Fairness\nPublished: 'Bias and Fairness in Artificial Intelligence: Methods and Mitigation Strategies'\nStatus: [ONLINE] Open for High-Impact Roles & Research",
+  experience: "1. H Nahata Power Private Limited (June 11, 2024 – June 21, 2024, New Delhi)\n   Role: Engineering Intern\n   • Solar power generation & energy management system optimizations\n   • Explored Big Data and AI techniques for energy modeling\n\n2. Gee Kay (2024, New Delhi)\n   Role: Industrial Trainee / Intern\n   • Industrial manufacturing and engineering workflows exposure\n   • Operational discipline, cross-team collaboration, and technical operations",
   stack: "FRONTEND & UI:       Next.js (App Router), React 19, TypeScript, Tailwind CSS, Lucide Icons\nBACKEND & APIS:      Python, FastAPI, Supabase (PostgreSQL, Realtime, RLS), Node.js, Streamlit\nMACHINE LEARNING/AI: Scikit-Learn, PyTorch, Ollama (LLaMA 3.2), Plotly, Pandas, NumPy\nSYSTEMS & TOOLS:     Git, Docker, Linux, C/C++, Embedded Microcontrollers",
   contact: "Email:    chadhakabir77@gmail.com\nGitHub:   https://github.com/KabirChadha (github.com/KabirChadha)\nLinkedIn: https://www.linkedin.com/in/kabir-singh-chadha-4b90a1363 (linkedin.com/in/kabir-singh-chadha)\nPaper:    https://doi.org/10.36676/jrps.v15.i3.1425\nLocation: New Delhi, India / Remote Available",
   "sudo hire": ">>> ACCESS GRANTED: HIGH-PRIORITY CANDIDATE <<<\nMatches requirements for: AI/ML Engineer, Full-Stack Architect, Quantitative Systems.\nDemonstrated capability in zero-leakage math pipelines, published academic research, and production hackathon wins.\nContact immediately: chadhakabir77@gmail.com"

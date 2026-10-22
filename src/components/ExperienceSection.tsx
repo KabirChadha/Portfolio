@@ -15,10 +15,10 @@ export const ExperienceSection: React.FC = () => {
             <span>// 04. ENGINEERING_EXPERIENCE</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold font-mono text-[#f4f4f6] tracking-tight">
-            INDUSTRY INTERNSHIPS & ROLES
+            OFFLINE ENGINEERING INTERNSHIPS
           </h2>
           <p className="text-sm sm:text-base text-[#9ba1b6] max-w-3xl">
-            Applied software engineering and machine learning roles focused on high-throughput model optimization, zero-leakage training pipelines, and real-time distributed web systems.
+            Hands-on industrial engineering and manufacturing internships focused on solar energy management systems, control strategies, and operational engineering workflows.
           </p>
         </div>
 

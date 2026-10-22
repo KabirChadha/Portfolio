@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { X, Check, Copy, ExternalLink, Layers, Cpu } from 'lucide-react';
+import { X, Check, Copy, ExternalLink, GitBranch, Layers, Cpu, ShieldCheck } from 'lucide-react';
 import { Project } from '../types/portfolio';
 
 interface ArchitectureModalProps {
@@ -21,51 +21,49 @@ export const ArchitectureModal: React.FC<ArchitectureModalProps> = ({ project, o
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md animate-fadeIn">
-      {/* 100% Solid Matte Charcoal/Black Container - Zero Ghosting */}
-      <div className="w-full max-w-4xl max-h-[90vh] bg-[#111114] border border-white/15 rounded-2xl shadow-2xl flex flex-col overflow-hidden text-[#F8F8F8]">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-md animate-fadeIn">
+      <div className="w-full max-w-4xl max-h-[90vh] bg-[#080910] border border-[#ff6b00]/60 rounded-lg shadow-[0_0_45px_rgba(255,107,0,0.3)] flex flex-col overflow-hidden">
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-4 bg-[#18181D] border-b border-white/10">
+        <div className="flex items-center justify-between px-5 py-3.5 bg-[#0d0f1a] border-b border-[#1b1f30]">
           <div className="flex items-center gap-3">
-            <span className="px-3 py-0.5 rounded-full bg-white/10 text-white border border-white/20 font-mono text-xs font-bold">
+            <span className="px-2 py-0.5 rounded bg-[#ff6b00]/15 text-[#ff6b00] border border-[#ff6b00]/40 font-mono text-xs font-bold">
               {project.code}
             </span>
-            <span className="text-sm sm:text-base font-bold font-mono text-white">
+            <span className="text-sm sm:text-base font-bold font-mono text-[#f4f4f6]">
               {project.title}
             </span>
           </div>
           <button
             onClick={onClose}
-            className="p-1.5 rounded-full text-[#8E8E93] hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
-            aria-label="Close modal"
+            className="p-1 rounded text-[#71768c] hover:text-[#ef4444] transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Scrollable Body */}
-        <div className="flex-1 overflow-y-auto p-6 sm:p-8 space-y-6 bg-[#111114]">
+        <div className="flex-1 overflow-y-auto p-5 sm:p-6 space-y-6">
           {/* Tagline & Problem */}
-          <div className="p-5 rounded-xl bg-white/[0.04] border border-white/10">
-            <span className="text-[10px] font-mono tracking-wider text-[#8E8E93] uppercase block mb-1 font-bold">
+          <div className="p-4 rounded-lg bg-[#0c0d17] border border-[#1b1e2e]">
+            <span className="text-[10px] font-mono tracking-wider text-[#ff6b00] uppercase block mb-1">
               // PROBLEM STATEMENT & SYSTEM OBJECTIVE
             </span>
-            <p className="text-sm text-[#E2E2DC] leading-relaxed">{project.problemStatement}</p>
+            <p className="text-sm text-[#d4d4d8] leading-relaxed">{project.problemStatement}</p>
           </div>
 
           {/* Architectural Dataflow */}
           <div className="space-y-2">
-            <div className="flex items-center gap-2 text-xs font-mono font-bold text-white">
-              <Layers className="w-4 h-4 text-white" />
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#ff6b00]">
+              <Layers className="w-4 h-4" />
               <span>END-TO-END ARCHITECTURAL PIPELINE</span>
             </div>
-            <div className="p-5 rounded-xl bg-white/[0.03] border border-white/10 font-mono text-xs space-y-2.5">
+            <div className="p-4 rounded-lg bg-[#0a0b12] border border-[#191d2e] font-mono text-xs space-y-2">
               {project.architectureFlow.map((step, idx) => (
                 <div key={idx} className="flex items-start gap-3">
-                  <span className="w-5 h-5 rounded-full bg-white text-black flex items-center justify-center text-[10px] font-extrabold shrink-0 mt-0.5">
+                  <span className="w-5 h-5 rounded bg-[#131522] border border-[#ff6b00]/40 text-[#ff6b00] flex items-center justify-center text-[10px] font-bold shrink-0">
                     {idx + 1}
                   </span>
-                  <span className="text-[#C4C4C8] leading-relaxed">{step}</span>
+                  <span className="text-[#9ba1b6]">{step}</span>
                 </div>
               ))}
             </div>
@@ -74,35 +72,35 @@ export const ArchitectureModal: React.FC<ArchitectureModalProps> = ({ project, o
           {/* Core Code Snippet */}
           <div className="space-y-2">
             <div className="flex items-center justify-between text-xs font-mono">
-              <span className="flex items-center gap-2 text-white font-bold">
-                <Cpu className="w-4 h-4 text-white" />
+              <span className="flex items-center gap-2 text-[#ff6b00] font-bold">
+                <Cpu className="w-4 h-4" />
                 <span>CORE IMPLEMENTATION: {project.coreCodeSnippet.title}</span>
               </span>
               <button
                 onClick={handleCopyCode}
-                className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 hover:bg-white text-white hover:text-black border border-white/20 transition-all cursor-pointer font-bold"
+                className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#131625] hover:bg-[#ff6b00] text-[#9ba1b6] hover:text-black border border-[#20253b] hover:border-[#ff6b00] transition-all"
               >
-                {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                {copied ? <Check className="w-3.5 h-3.5 text-[#10b981]" /> : <Copy className="w-3.5 h-3.5" />}
                 <span>{copied ? 'COPIED' : 'COPY CODE'}</span>
               </button>
             </div>
-            <pre className="p-4 rounded-xl bg-[#0A0A0C] border border-white/10 overflow-x-auto text-xs font-mono text-[#E2E2DC] leading-relaxed">
+            <pre className="p-4 rounded-lg bg-[#050508] border border-[#1b1f30] overflow-x-auto text-xs font-mono text-[#10b981] leading-relaxed">
               <code>{project.coreCodeSnippet.code}</code>
             </pre>
           </div>
 
           {/* Tech Stack Pills */}
           <div className="space-y-2">
-            <span className="text-xs font-mono font-bold text-[#8E8E93] uppercase tracking-wider block">
+            <span className="text-xs font-mono font-bold text-[#71768c] uppercase tracking-wider block">
               // COMPLETE COMPONENT STACK
             </span>
             <div className="flex flex-wrap gap-1.5">
               {project.techStack.map((tech) => (
                 <span
                   key={tech.name}
-                  className="px-3 py-1 rounded-full text-xs font-mono bg-white/10 text-white border border-white/15"
+                  className="px-2.5 py-1 rounded bg-[#0f111c] border border-[#22273d] text-xs font-mono text-[#d4d4d8]"
                 >
-                  <span className="text-white/40 mr-1">#</span>
+                  <span className="text-[#ff6b00] mr-1.5">[{tech.category}]</span>
                   {tech.name}
                 </span>
               ))}
@@ -110,37 +108,34 @@ export const ArchitectureModal: React.FC<ArchitectureModalProps> = ({ project, o
           </div>
         </div>
 
-        {/* Modal Footer */}
-        <div className="px-6 py-4 bg-[#18181D] border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+        {/* Footer Actions */}
+        <div className="flex items-center justify-between px-5 py-3 bg-[#0a0c16] border-t border-[#1b1e2e]">
+          <div className="flex items-center gap-2 text-xs font-mono text-[#71768c]">
+            <GitBranch className="w-3.5 h-3.5 text-[#ff6b00]" />
+            <span>BRANCH: main</span>
+          </div>
           <div className="flex items-center gap-3">
             {project.liveUrl && (
               <a
                 href={project.liveUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-white text-black font-mono text-xs font-bold hover:bg-white/90 transition-all shadow-md"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded bg-[#121422] hover:bg-[#ff6b00] text-[#ff6b00] hover:text-black font-mono text-xs font-semibold border border-[#ff6b00]/40 transition-all"
               >
-                <span>OPEN LIVE DEMO</span>
                 <ExternalLink className="w-3.5 h-3.5" />
+                <span>LIVE PREVIEW</span>
               </a>
             )}
             <a
               href={project.githubUrl}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/10 hover:bg-white text-white hover:text-black font-mono text-xs font-bold border border-white/20 transition-all"
+              className="flex items-center gap-1.5 px-4 py-1.5 rounded bg-[#ff6b00] hover:bg-[#ff7a00] text-black font-mono text-xs font-bold transition-all shadow-[0_0_15px_rgba(255,107,0,0.3)]"
             >
-              <span>VIEW ON GITHUB</span>
+              <span>INSPECT GITHUB REPOSITORY</span>
               <ExternalLink className="w-3.5 h-3.5" />
             </a>
           </div>
-
-          <button
-            onClick={onClose}
-            className="px-4 py-2 rounded-full text-xs font-mono text-[#8E8E93] hover:text-white transition-colors cursor-pointer"
-          >
-            DISMISS [ESC]
-          </button>
         </div>
       </div>
     </div>

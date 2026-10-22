@@ -190,6 +190,41 @@ export const TerminalEmulator: React.FC<TerminalEmulatorProps> = ({ isOpen, onCl
         );
         break;
 
+      case 'stack':
+      case 'techstack':
+        outputNode = (
+          <div className="space-y-2 text-xs">
+            <p className="text-[#ff6b00] font-bold font-mono">TECHNICAL ARCHITECTURE STACK:</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <div className="p-2.5 rounded bg-[#0e101b] border border-[#1e2338]">
+                <p className="text-[#ff6b00] font-mono text-[11px] font-bold uppercase tracking-wider">Frontend & UI</p>
+                <p className="text-[#d4d4d8] text-[11px] mt-1 font-mono">
+                  Next.js (App Router), React 19, TypeScript, Tailwind CSS, Lucide Icons
+                </p>
+              </div>
+              <div className="p-2.5 rounded bg-[#0e101b] border border-[#1e2338]">
+                <p className="text-[#ff6b00] font-mono text-[11px] font-bold uppercase tracking-wider">Backend & APIs</p>
+                <p className="text-[#d4d4d8] text-[11px] mt-1 font-mono">
+                  Python, FastAPI, Supabase (PostgreSQL, Realtime, RLS), Node.js, Streamlit
+                </p>
+              </div>
+              <div className="p-2.5 rounded bg-[#0e101b] border border-[#1e2338]">
+                <p className="text-[#ff6b00] font-mono text-[11px] font-bold uppercase tracking-wider">Machine Learning & AI</p>
+                <p className="text-[#d4d4d8] text-[11px] mt-1 font-mono">
+                  Scikit-Learn, PyTorch, Ollama (LLaMA 3.2), Plotly, Pandas, NumPy
+                </p>
+              </div>
+              <div className="p-2.5 rounded bg-[#0e101b] border border-[#1e2338]">
+                <p className="text-[#ff6b00] font-mono text-[11px] font-bold uppercase tracking-wider">Systems & Tools</p>
+                <p className="text-[#d4d4d8] text-[11px] mt-1 font-mono">
+                  Git, Docker, Linux, C/C++, Embedded Microcontrollers
+                </p>
+              </div>
+            </div>
+          </div>
+        );
+        break;
+
       case 'contact':
         outputNode = (
           <div className="space-y-1.5 text-xs text-[#d4d4d8]">
@@ -258,7 +293,7 @@ export const TerminalEmulator: React.FC<TerminalEmulatorProps> = ({ isOpen, onCl
     }
   };
 
-  const quickCommands = ['help', 'whoami', 'projects', 'paper', 'hackathons', 'experience', 'skills', 'contact', 'sudo hire', 'clear'];
+  const quickCommands = ['help', 'whoami', 'stack', 'projects', 'paper', 'hackathons', 'experience', 'skills', 'contact', 'sudo hire', 'clear'];
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80 backdrop-blur-md animate-fadeIn">

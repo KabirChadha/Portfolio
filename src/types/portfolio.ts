@@ -57,6 +57,9 @@ export interface ResearchPaper {
   fairnessCriteria: FairnessCriterion[];
   mitigationFramework: MitigationStage[];
   links: { label: string; url: string }[];
+  journalUrl?: string;
+  doiUrl?: string;
+  doi?: string;
   bibtex: string;
 }
 

@@ -58,24 +58,34 @@ export const ResearchSection: React.FC = () => {
             </div>
 
             {/* Quick Action Buttons */}
-            <div className="flex flex-wrap sm:flex-nowrap items-center gap-2.5 shrink-0">
-              <button
-                onClick={handleCopyBibtex}
-                className="flex items-center gap-1.5 px-3.5 py-2 rounded bg-[#121524] hover:bg-[#ff6b00] text-[#ff6b00] hover:text-black font-mono text-xs font-semibold border border-[#ff6b00]/40 transition-all"
-              >
-                {copiedBibtex ? <Check className="w-3.5 h-3.5 text-[#10b981]" /> : <Copy className="w-3.5 h-3.5" />}
-                <span>{copiedBibtex ? 'CITATION COPIED' : 'COPY BIBTEX'}</span>
-              </button>
-
+            <div className="flex flex-wrap items-center gap-2.5 shrink-0">
               <a
-                href={RESEARCH_PAPER.links[0].url}
+                href={RESEARCH_PAPER.journalUrl || "https://jrps.shodhsagar.com/index.php/j/article/view/1425"}
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-1.5 px-4 py-2 rounded bg-[#ff6b00] hover:bg-[#ff7a00] text-black font-mono text-xs font-bold transition-all shadow-[0_0_15px_rgba(255,107,0,0.3)]"
               >
-                <span>RESEARCHGATE</span>
+                <span>Read Article (Journal)</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
+
+              <a
+                href={RESEARCH_PAPER.doiUrl || "https://doi.org/10.36676/jrps.v15.i3.1425"}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-1.5 px-3.5 py-2 rounded bg-[#10121d] hover:bg-[#181b2c] text-[#f4f4f6] hover:text-[#ff6b00] font-mono text-xs font-semibold border border-[#23283e] hover:border-[#ff6b00]/60 transition-all"
+              >
+                <span>DOI Record</span>
+                <ExternalLink className="w-3.5 h-3.5 text-[#ff6b00]" />
+              </a>
+
+              <button
+                onClick={handleCopyBibtex}
+                className="flex items-center gap-1.5 px-3.5 py-2 rounded bg-[#121524] hover:bg-[#ff6b00] text-[#ff6b00] hover:text-black font-mono text-xs font-semibold border border-[#ff6b00]/40 transition-all cursor-pointer"
+              >
+                {copiedBibtex ? <Check className="w-3.5 h-3.5 text-[#10b981]" /> : <Copy className="w-3.5 h-3.5" />}
+                <span>{copiedBibtex ? 'CITATION COPIED' : 'Copy BibTeX Citation'}</span>
+              </button>
             </div>
           </div>
 

@@ -14,11 +14,11 @@ export const PERSONAL_INFO = {
   status: "ACTIVE_SYSTEM_ONLINE",
   kernelVersion: "v2.6.4-prod",
   location: "New Delhi, India / Remote",
-  availability: "Open to High-Impact Engineering Roles & AI Research Collaborations",
-  email: "kabir.chadha.dev@gmail.com",
+  email: "chadhakabir77@gmail.com",
   github: "https://github.com/KabirChadha",
-  linkedin: "https://www.linkedin.com/in/kabir-singh-chadha/",
-  researchGate: "https://www.researchgate.net/profile/Kabir-Chadha",
+  githubDisplay: "github.com/KabirChadha",
+  linkedin: "https://www.linkedin.com/in/kabir-singh-chadha-4b90a1363",
+  linkedinDisplay: "linkedin.com/in/kabir-singh-chadha",
   bioTerminal: [
     "kabir@kernel:~$ whoami",
     "> AI Systems Engineer & Full-Stack Architect specializing in high-reliability machine learning pipelines,",
@@ -301,8 +301,8 @@ export const RESEARCH_PAPER: ResearchPaper = {
   id: "ai-bias-fairness-paper",
   title: "Bias and Fairness in Artificial Intelligence: Methods and Mitigation Strategies",
   authors: ["Kabir Singh Chadha"],
-  venue: "Shodh Sagar / International Conference on Artificial Intelligence and Information Technology (ICAIIT)",
-  indexedIn: ["ResearchGate", "Shodh Sagar International Journal", "Google Scholar"],
+  venue: "Journal of Research & Pedagogical Studies (JRPS) / Shodh Sagar",
+  indexedIn: ["Journal of Research & Pedagogical Studies (JRPS)", "Shodh Sagar", "Crossref DOI"],
   abstract:
     "As artificial intelligence systems increasingly automate high-stakes decision-making across criminal justice, healthcare triage, loan underwriting, and hiring, algorithmic bias poses severe risks of perpetuating and amplifying societal inequalities. This research provides a rigorous examination of the structural genesis of prejudice in machine learning systems, examining data collection distortions, historical label contamination, and loss function misalignments. We establish a unified mathematical comparison of competing fairness definitions (Demographic Parity, Equalized Odds, Predictive Rate Parity) and present an end-to-end taxonomy of mitigation strategies spanning pre-processing data transformations, in-processing constrained optimization, and post-processing decision boundary adjustments.",
   coreContributions: [
@@ -365,15 +365,23 @@ export const RESEARCH_PAPER: ResearchPaper = {
     }
   ],
   links: [
-    { label: "ResearchGate Publication", url: "https://www.researchgate.net/publication/383181817_Bias_and_Fairness_in_Artificial_Intelligence_Methods_and_Mitigation_Strategies" },
-    { label: "Shodh Sagar Journal Record", url: "https://shodhsagar.com/index.php/j/article/view/129" },
+    { label: "Read Article (Journal)", url: "https://jrps.shodhsagar.com/index.php/j/article/view/1425" },
+    { label: "DOI Record", url: "https://doi.org/10.36676/jrps.v15.i3.1425" },
   ],
+  journalUrl: "https://jrps.shodhsagar.com/index.php/j/article/view/1425",
+  doiUrl: "https://doi.org/10.36676/jrps.v15.i3.1425",
+  doi: "10.36676/jrps.v15.i3.1425",
   bibtex: `@article{chadha2024bias,
   title={Bias and Fairness in Artificial Intelligence: Methods and Mitigation Strategies},
   author={Chadha, Kabir Singh},
-  journal={Shodh Sagar International Journal of Engineering and Computer Science},
+  journal={Journal of Research & Pedagogical Studies},
+  volume={15},
+  number={3},
+  pages={1425},
   year={2024},
   publisher={Shodh Sagar},
+  doi={10.36676/jrps.v15.i3.1425},
+  url={https://doi.org/10.36676/jrps.v15.i3.1425},
   keywords={Algorithmic Fairness, Artificial Intelligence, Machine Learning, Demographic Parity, Equalized Odds, AI Ethics}
 }`
 };
@@ -530,6 +538,6 @@ export const TERMINAL_COMMANDS: Record<string, string> = {
   help: "Available commands:\n  whoami      - Display engineer credentials and summary\n  projects    - List all 4 production projects with metrics\n  paper       - Display published research on AI Bias and Fairness\n  hackathons  - Show hackathon victories and award highlights\n  experience  - List engineering internships and deliverables\n  skills      - Output full engineering skill matrix\n  stack       - Print core technical stack\n  contact     - Display contact channels and email\n  clear       - Clear terminal output\n  sudo hire   - Print hiring recommendation and instant contact",
   whoami: "Kabir Singh Chadha\nRole: AI Systems Engineer & Full-Stack Architect\nFocus: Zero-Leakage Quantitative ML, Real-Time Distributed Systems, Fair AI\nPublished: 'Bias and Fairness in Artificial Intelligence: Methods and Mitigation Strategies'\nStatus: [ONLINE] Open for High-Impact Roles & Research",
   stack: "FRONTEND:  Next.js 16, React 19, TypeScript, Tailwind CSS v4\nML/AI:     Scikit-Learn, Pandas, NumPy, Ollama LLaMA, Fairlearn\nBACKEND:   Python, Node.js, Supabase Realtime, PostgreSQL RLS\nLOGISTICS: Leaflet, Plotly Graph Objects, Discrete Simulation",
-  contact: "Email:    kabir.chadha.dev@gmail.com\nGitHub:   https://github.com/KabirChadha\nLinkedIn: https://www.linkedin.com/in/kabir-singh-chadha/\nResearch: https://www.researchgate.net/profile/Kabir-Chadha\nLocation: New Delhi, India / Remote Available",
-  "sudo hire": ">>> ACCESS GRANTED: HIGH-PRIORITY CANDIDATE <<<\nMatches requirements for: AI/ML Engineer, Full-Stack Architect, Quantitative Systems.\nDemonstrated capability in zero-leakage math pipelines, published academic research, and production hackathon wins.\nContact immediately: kabir.chadha.dev@gmail.com"
+  contact: "Email:    chadhakabir77@gmail.com\nGitHub:   https://github.com/KabirChadha (github.com/KabirChadha)\nLinkedIn: https://www.linkedin.com/in/kabir-singh-chadha-4b90a1363 (linkedin.com/in/kabir-singh-chadha)\nPaper:    https://doi.org/10.36676/jrps.v15.i3.1425\nLocation: New Delhi, India / Remote Available",
+  "sudo hire": ">>> ACCESS GRANTED: HIGH-PRIORITY CANDIDATE <<<\nMatches requirements for: AI/ML Engineer, Full-Stack Architect, Quantitative Systems.\nDemonstrated capability in zero-leakage math pipelines, published academic research, and production hackathon wins.\nContact immediately: chadhakabir77@gmail.com"
 };

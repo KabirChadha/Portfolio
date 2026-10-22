@@ -104,8 +104,8 @@ npm run start
 ## 📚 Published Research on AI Bias & Fairness
 
 * **Title**: *Bias and Fairness in Artificial Intelligence: Methods and Mitigation Strategies*
-* **Author**: Kabir Singh Chadha
-* **Venue**: Shodh Sagar / International Conference on Artificial Intelligence and Information Technology (ICAIIT) / Indexed on ResearchGate.
+* **Venue**: Journal of Research & Pedagogical Studies (JRPS) / Shodh Sagar (DOI: [10.36676/jrps.v15.i3.1425](https://doi.org/10.36676/jrps.v15.i3.1425))
+* **Article URL**: [https://jrps.shodhsagar.com/index.php/j/article/view/1425](https://jrps.shodhsagar.com/index.php/j/article/view/1425)
 * **Key Research Highlights**:
   - Mathematical evaluation of competing fairness criteria: Demographic Parity, Equalized Odds, Equal Opportunity, and Predictive Rate Parity.
   - 3-Stage Lifecycle Mitigation Framework:

@@ -127,7 +127,8 @@ export const TerminalEmulator: React.FC<TerminalEmulatorProps> = ({ isOpen, onCl
           <div className="space-y-2 text-xs text-[#d4d4d8]">
             <p className="text-[#ff6b00] font-bold">Published Academic Paper:</p>
             <p className="font-semibold text-[#f4f4f6]">{RESEARCH_PAPER.title}</p>
-            <p className="text-[11px] text-[#9ba1b6]">Venue: {RESEARCH_PAPER.venue} | Indexed: {RESEARCH_PAPER.indexedIn.join(', ')}</p>
+            <p className="text-[11px] text-[#9ba1b6]">Venue: {RESEARCH_PAPER.venue}</p>
+            <p className="text-[11px] text-[#71768c]">DOI: <a href="https://doi.org/10.36676/jrps.v15.i3.1425" target="_blank" rel="noreferrer" className="text-[#ff6b00] underline font-mono">10.36676/jrps.v15.i3.1425</a></p>
             <p className="text-[11px] leading-relaxed text-[#c4c7d4]">{RESEARCH_PAPER.abstract.slice(0, 240)}...</p>
             <div className="text-[10px] font-mono text-[#10b981]">
               [Mathematical Models Evaluated: Demographic Parity, Equalized Odds, Equal Opportunity]
@@ -191,12 +192,12 @@ export const TerminalEmulator: React.FC<TerminalEmulatorProps> = ({ isOpen, onCl
 
       case 'contact':
         outputNode = (
-          <div className="space-y-1 text-xs text-[#d4d4d8]">
+          <div className="space-y-1.5 text-xs text-[#d4d4d8]">
             <p className="text-[#ff6b00] font-bold">Direct Channels:</p>
-            <p>Email: <span className="text-[#10b981] font-mono">kabir.chadha.dev@gmail.com</span></p>
-            <p>GitHub: <a href="https://github.com/KabirChadha" target="_blank" rel="noreferrer" className="text-[#ff6b00] underline font-mono">https://github.com/KabirChadha</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/kabir-singh-chadha/" target="_blank" rel="noreferrer" className="text-[#ff6b00] underline font-mono">https://www.linkedin.com/in/kabir-singh-chadha/</a></p>
-            <p>ResearchGate: <a href="https://www.researchgate.net/profile/Kabir-Chadha" target="_blank" rel="noreferrer" className="text-[#ff6b00] underline font-mono">https://www.researchgate.net/profile/Kabir-Chadha</a></p>
+            <p>Email: <span className="text-[#10b981] font-mono">chadhakabir77@gmail.com</span></p>
+            <p>GitHub: <a href="https://github.com/KabirChadha" target="_blank" rel="noreferrer" className="text-[#ff6b00] underline font-mono">github.com/KabirChadha</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/kabir-singh-chadha-4b90a1363" target="_blank" rel="noreferrer" className="text-[#ff6b00] underline font-mono">linkedin.com/in/kabir-singh-chadha</a></p>
+            <p>Paper DOI: <a href="https://doi.org/10.36676/jrps.v15.i3.1425" target="_blank" rel="noreferrer" className="text-[#ff6b00] underline font-mono">doi.org/10.36676/jrps.v15.i3.1425</a></p>
           </div>
         );
         break;
@@ -207,7 +208,7 @@ export const TerminalEmulator: React.FC<TerminalEmulatorProps> = ({ isOpen, onCl
             <p className="text-[#ff6b00] font-bold font-mono">★★★ SYSTEM AUTHORIZATION GRANTED ★★★</p>
             <p className="text-[#f4f4f6]">Candidate Kabir Singh Chadha has been classified as a TOP-TIER engineer.</p>
             <p className="text-[#9ba1b6]">Matches role criteria: Full-Stack Architect, AI Systems Engineer, Quantitative Machine Learning.</p>
-            <p className="text-[#10b981] font-mono font-bold mt-2">Action: Send an email directly to kabir.chadha.dev@gmail.com to schedule an interview.</p>
+            <p className="text-[#10b981] font-mono font-bold mt-2">Action: Send an email directly to chadhakabir77@gmail.com to schedule an interview.</p>
           </div>
         );
         break;

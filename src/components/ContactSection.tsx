@@ -94,46 +94,39 @@ export const ContactSection: React.FC = () => {
                 <span className="text-[10px] font-mono tracking-wider text-[#71768c] uppercase block">
                   Network Endpoints
                 </span>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <div className="space-y-2">
                   <a
                     href={PERSONAL_INFO.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center justify-between p-3 rounded-lg bg-[#050508] border border-[#191d2e] hover:border-[#ff6b00] text-xs font-mono text-[#d4d4d8] hover:text-[#ff6b00] transition-all"
+                    className="flex items-center justify-between p-3.5 rounded-lg bg-[#050508] border border-[#191d2e] hover:border-[#ff6b00] text-xs font-mono text-[#d4d4d8] hover:text-[#ff6b00] transition-all group"
                   >
-                    <span className="flex items-center gap-2">
+                    <div className="flex items-center gap-2.5">
                       <GithubIcon className="w-4 h-4 text-[#ff6b00]" />
-                      GitHub
-                    </span>
-                    <ArrowUpRight className="w-3.5 h-3.5 text-[#71768c]" />
+                      <div>
+                        <div className="text-[10px] text-[#71768c]">GITHUB</div>
+                        <div className="text-xs text-[#f4f4f6] group-hover:text-[#ff6b00]">github.com/KabirChadha</div>
+                      </div>
+                    </div>
+                    <ArrowUpRight className="w-3.5 h-3.5 text-[#71768c] group-hover:text-[#ff6b00]" />
                   </a>
 
                   <a
                     href={PERSONAL_INFO.linkedin}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center justify-between p-3 rounded-lg bg-[#050508] border border-[#191d2e] hover:border-[#ff6b00] text-xs font-mono text-[#d4d4d8] hover:text-[#ff6b00] transition-all"
+                    className="flex items-center justify-between p-3.5 rounded-lg bg-[#050508] border border-[#191d2e] hover:border-[#ff6b00] text-xs font-mono text-[#d4d4d8] hover:text-[#ff6b00] transition-all group"
                   >
-                    <span className="flex items-center gap-2">
+                    <div className="flex items-center gap-2.5">
                       <LinkedinIcon className="w-4 h-4 text-[#ff6b00]" />
-                      LinkedIn
-                    </span>
-                    <ArrowUpRight className="w-3.5 h-3.5 text-[#71768c]" />
+                      <div>
+                        <div className="text-[10px] text-[#71768c]">LINKEDIN</div>
+                        <div className="text-xs text-[#f4f4f6] group-hover:text-[#ff6b00]">linkedin.com/in/kabir-singh-chadha</div>
+                      </div>
+                    </div>
+                    <ArrowUpRight className="w-3.5 h-3.5 text-[#71768c] group-hover:text-[#ff6b00]" />
                   </a>
                 </div>
-
-                <a
-                  href={PERSONAL_INFO.researchGate}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center justify-between p-3 rounded-lg bg-[#050508] border border-[#191d2e] hover:border-[#ff6b00] text-xs font-mono text-[#d4d4d8] hover:text-[#ff6b00] transition-all"
-                >
-                  <span className="flex items-center gap-2">
-                    <FileText className="w-4 h-4 text-[#ff6b00]" />
-                    ResearchGate Profile
-                  </span>
-                  <ArrowUpRight className="w-3.5 h-3.5 text-[#71768c]" />
-                </a>
               </div>
 
               {/* Location telemetry */}

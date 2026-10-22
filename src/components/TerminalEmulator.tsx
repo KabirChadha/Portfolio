@@ -140,14 +140,15 @@ export const TerminalEmulator: React.FC<TerminalEmulatorProps> = ({ isOpen, onCl
       case 'hackathons':
         outputNode = (
           <div className="space-y-2 text-xs">
-            <p className="text-[#ff6b00] font-bold">Hackathon Wins & Achievements:</p>
+            <p className="text-[#ff6b00] font-bold font-mono">COMPETITIVE HACKATHONS & ACHIEVEMENTS:</p>
             {HACKATHON_WINS.map((h) => (
-              <div key={h.id} className="p-2 rounded bg-[#0e101b] border border-[#1e2338]">
+              <div key={h.id} className="p-2.5 rounded bg-[#0e101b] border border-[#1e2338] space-y-1">
                 <div className="flex items-center justify-between">
-                  <span className="text-[#f4f4f6] font-semibold">{h.award}</span>
-                  <span className="text-[10px] text-[#ff6b00]">{h.hackathon}</span>
+                  <span className="text-[#f4f4f6] font-bold">{h.hackathon}</span>
+                  <span className="text-[10px] font-mono text-[#ff6b00] font-bold">{h.award}</span>
                 </div>
-                <p className="text-[#9ba1b6] text-[11px] mt-0.5">{h.projectTitle}: {h.description}</p>
+                <p className="text-[#ff7a00] text-[11px] font-mono">{h.organizer} ({h.date})</p>
+                <p className="text-[#9ba1b6] text-[11px] leading-relaxed">{h.description}</p>
               </div>
             ))}
           </div>
@@ -157,7 +158,7 @@ export const TerminalEmulator: React.FC<TerminalEmulatorProps> = ({ isOpen, onCl
       case 'experience':
         outputNode = (
           <div className="space-y-2 text-xs">
-            <p className="text-[#ff6b00] font-bold font-mono">OFFLINE INDUSTRIAL & ENGINEERING INTERNSHIPS:</p>
+            <p className="text-[#ff6b00] font-bold font-mono">INDUSTRY INTERNSHIPS & ENGINEERING ROLES:</p>
             {INTERNSHIP_EXPERIENCES.map((exp) => (
               <div key={exp.id} className="p-2.5 rounded bg-[#0e101b] border border-[#1e2338] space-y-1">
                 <div className="flex items-center justify-between">

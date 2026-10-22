@@ -116,12 +116,15 @@ npm run start
 
 ---
 
-## 🏆 Hackathon Wins & Experience
+## 🏆 Hackathons & Engineering Experience
 
-* **Hack Beyond 2024**: Winner // 1st Place in AI & Social Impact for Student Risk Classifier & AI Analytics Suite.
-* **National Campus Innovation Challenge**: Best Realtime Architecture & Community Impact for CampusDrop.
-* **Crisis Logistics & Health Tech Challenge**: Best Healthcare Simulation Award for PharmaNet Autonomous Rebalancing Network.
-* **Engineering Internships**: AI/ML Systems Engineering Intern & Full-Stack Software Engineering Intern.
+* **Hack and Beyond – Building Intelligent AI Applications**: Winner // 1st Place in AI Innovation, Dept of ECE, SRMIST in association with Ansnicore Solutions Pvt. Ltd. (August 2026).
+* **Adobe Hackathon**: Round 2 Qualifier in national competitive engineering track (2026).
+* **Hack4Health Hackathon**: Participant developing healthcare delivery software solutions (2026).
+* **Engineering Internships & Industrial Training**:
+  * **Ansnicore Solutions Pvt. Ltd.**: Software Engineering / AI Intern (Online, September 10, 2026 – Present).
+  * **H Nahata Power Private Limited**: Engineering Intern (Solar Energy & Control Systems Optimization, June 2024).
+  * **Gee Kay**: Industrial Trainee / Intern (Industrial Manufacturing & Technical Operations, 2024).
 
 ---
 

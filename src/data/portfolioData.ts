@@ -29,7 +29,7 @@ export const PERSONAL_INFO = {
   stats: [
     { label: "Production Systems", value: "4+", detail: "Full Stack & AI Platforms" },
     { label: "Published Papers", value: "1", detail: "AI Bias & Fairness in Shodh Sagar" },
-    { label: "Hackathon Podiums", value: "3+", detail: "Hack Beyond & Campus Challenges" },
+    { label: "Competitive Hackathons", value: "3", detail: "Winner (1st) & Adobe R2" },
     { label: "Leakage Tolerance", value: "0.00e+00", detail: "Mathematical Invariance Tested" },
   ]
 };
@@ -388,90 +388,106 @@ export const RESEARCH_PAPER: ResearchPaper = {
 
 export const HACKATHON_WINS: HackathonWin[] = [
   {
-    id: "hack-beyond-win",
-    award: "Winner // 1st Place (AI & Social Impact)",
-    hackathon: "Hack Beyond 2024",
-    organizer: "Engineering & Innovation Council",
-    track: "AI / ML & Educational Technologies",
-    projectTitle: "Student Risk Classifier & AI Analytics Suite",
+    id: "hack-and-beyond",
+    award: "Winner (1st Place)",
+    hackathon: "Hack and Beyond – Building Intelligent AI Applications",
+    organizer: "Department of ECE, SRMIST in association with Ansnicore Solutions Pvt. Ltd.",
+    track: "Intelligent AI Applications & Rapid Prototyping",
+    projectTitle: "Student Risk Classifier & Intelligent AI System",
     description:
-      "Engineered an end-to-end academic risk intelligence suite featuring dual-mode local Ollama LLaMA 3.2 inference, counterfactual sensitivity simulations, and unsupervised K-Means behavioral clustering to identify at-risk students before dropout crises.",
+      "Awarded 1st place in AI innovation for developing intelligent AI applications under rapid prototyping constraints. Recognized for outstanding performance and innovative technical execution.",
     keyDeliverables: [
-      "Developed full prototype within a 36-hour sprint with working offline Ollama integration.",
-      "Achieved sub-100ms local inference response for instant advisor what-if scenario testing.",
-      "Praised by judges for architectural zero-data-leakage guarantee regarding student privacy.",
+      "Awarded 1st Place in AI innovation by SRMIST ECE Dept & Ansnicore Solutions.",
+      "Engineered full intelligent AI application prototype under high-velocity sprint constraints.",
+      "Recognized for outstanding technical performance, zero-leakage architecture, and execution.",
     ],
-    techStack: ["Python", "Streamlit", "Scikit-Learn", "Ollama LLaMA 3.2", "Plotly"],
-    date: "2024"
+    techStack: ["Python", "Machine Learning", "Streamlit", "Scikit-Learn", "Ollama LLaMA"],
+    date: "August 2026"
   },
   {
-    id: "national-campus-challenge",
-    award: "Best Realtime Architecture & Community Impact",
-    hackathon: "National Campus Innovation Hackathon",
-    organizer: "University Tech Summit",
-    track: "Distributed Systems & Smart Campus Platforms",
-    projectTitle: "CampusDrop Real-Time Recovery Network",
+    id: "adobe-hackathon",
+    award: "Round 2 Qualifier",
+    hackathon: "Adobe Hackathon",
+    organizer: "Adobe",
+    track: "Competitive Engineering & Algorithmic Design",
+    projectTitle: "Full-Stack System & Algorithmic Problem Solving",
     description:
-      "Created an event-driven campus lost and found platform utilizing Supabase Realtime websocket subscriptions, strict Row Level Security, and .edu domain identity validation.",
+      "Successfully cleared Round 1 screening and qualified for Round 2 in Adobe's competitive hackathon track.",
     keyDeliverables: [
-      "Built working real-time sync with zero manual polling across mobile and desktop clients.",
-      "Integrated direct multipart photo upload to cloud storage buckets with optimistic UI updates.",
-      "Demonstrated secure claimant contact shielding with PostgreSQL RLS policies.",
+      "Successfully cleared competitive Round 1 technical screening.",
+      "Qualified for Round 2 in Adobe's national hackathon challenge track.",
+      "Demonstrated robust algorithmic efficiency, clean software architecture, and problem-solving.",
     ],
-    techStack: ["React 19", "TypeScript", "Supabase Realtime", "PostgreSQL RLS", "Tailwind CSS"],
-    date: "2024"
+    techStack: ["Algorithms", "Data Structures", "System Design", "TypeScript", "Python"],
+    date: "2026"
   },
   {
-    id: "smart-logistics-hackathon",
-    award: "Best Healthcare Simulation Award",
-    hackathon: "Crisis Logistics & Health Tech Challenge",
+    id: "hack4health-hackathon",
+    award: "Participant (Awaiting Results)",
+    hackathon: "Hack4Health Hackathon",
     organizer: "Health Innovations Consortium",
-    track: "Emergency Supply Chain & Predictive Allocation",
-    projectTitle: "PharmaNet Autonomous Drug Rebalancing Network",
+    track: "Healthcare Technology & Software Delivery",
+    projectTitle: "Healthcare Delivery & Logistics Software Solution",
     description:
-      "Designed an autonomous multi-echelon geospatial simulation and cascade risk detection engine that forecasts drug stockouts and algorithmically computes optimal transshipment relief routes.",
+      "Developed an innovative software solution addressing healthcare delivery challenges; currently awaiting results.",
     keyDeliverables: [
-      "Engineered 14-day discrete simulation tracking burn rates across Hubs, CHCs, and PHCs.",
-      "Implemented dynamic Leaflet route visualization with real-time polyline relief routes.",
-      "Simulated disaster disruption stress-tests proving stockout mitigation.",
+      "Built and deployed full-stack software prototype addressing healthcare logistics challenges.",
+      "Integrated real-time resource tracking and responsive patient-facing workflows.",
+      "Submitted solution for evaluation; currently awaiting final round results.",
     ],
-    techStack: ["React 19", "TypeScript", "Leaflet", "Simulation Engine", "Tailwind CSS"],
-    date: "2024"
+    techStack: ["React", "TypeScript", "Node.js", "Healthcare Tech", "API Integration"],
+    date: "2026"
   }
 ];
 
 export const INTERNSHIP_EXPERIENCES: InternshipExperience[] = [
   {
+    id: "ansnicore-solutions-intern",
+    role: "Software Engineering / AI Intern",
+    organization: "Ansnicore Solutions Pvt. Ltd.",
+    period: "September 10, 2026 – Present",
+    location: "Online",
+    type: "Current Internship (Online)",
+    summary:
+      "Contributing to the development and implementation of intelligent AI solutions and software systems, collaborating with engineering teams to analyze requirements and build scalable features.",
+    keyAchievements: [
+      "Contributing to the development and implementation of intelligent AI solutions and software systems.",
+      "Collaborating with engineering teams to analyze project requirements and build scalable technical features.",
+      "Applying core computer science and AI/ML principles to solve real-world engineering problems.",
+    ],
+    technologies: ["AI Solutions", "Software Engineering", "System Design", "Python", "Full-Stack Development"]
+  },
+  {
     id: "h-nahata-power-intern",
     role: "Engineering Intern",
     organization: "H Nahata Power Private Limited",
     period: "June 11, 2024 – June 21, 2024",
-    location: "New Delhi, India",
+    location: "New Delhi",
     type: "Offline Internship",
     summary:
-      "Contributed to solar power generation and energy management system optimizations using control management strategies and explored Big Data and AI techniques for energy modeling.",
+      "Worked on projects related to solar power generation and energy management solutions, contributing to system optimization using control management strategies.",
     keyAchievements: [
-      "Contributed to solar power generation and energy management system optimizations using control management strategies.",
-      "Assisted in algorithmic improvements to enhance system efficiency and explored integrations of Big Data and AI techniques for energy modeling.",
-      "Demonstrated technical problem-solving and cross-functional engineering aptitude in an industrial setting.",
+      "Worked on projects related to solar power generation and energy management solutions.",
+      "Contributed to optimizing solar energy systems using control management strategies.",
+      "Assisted in developing algorithms to enhance system efficiency and proposed improvements through Big Data and AI integration.",
     ],
-    technologies: ["Solar Energy Systems", "Control Strategies", "Energy Optimization", "Big Data", "AI Modeling", "Industrial Automation"]
+    technologies: ["Solar Energy Systems", "Control Strategies", "Energy Optimization", "Big Data", "AI Integration"]
   },
   {
     id: "gee-kay-industrial-intern",
     role: "Industrial Trainee / Intern",
     organization: "Gee Kay",
     period: "2024",
-    location: "New Delhi, India (Offline)",
-    type: "Offline Industrial Training",
+    location: "New Delhi (Offline)",
+    type: "Industrial Training (Offline)",
     summary:
-      "Gained hands-on exposure to industrial manufacturing and real-world engineering workflows, strengthening analytical problem-solving and foundational understanding of operational technical systems.",
+      "Gained practical exposure to real-world industrial working environments, developing professional discipline, teamwork skills, and an understanding of organizational operations.",
     keyAchievements: [
-      "Gained practical hands-on exposure to industrial manufacturing and real-world engineering workflows.",
-      "Developed operational discipline, cross-team collaboration, and foundational understanding of organizational technical operations.",
-      "Strengthened core analytical problem-solving and industrial fundamentals.",
+      "Gained practical exposure to real-world industrial working environments and operations.",
+      "Developed professional discipline, teamwork skills, and an understanding of organizational operations.",
+      "Strengthened analytical and technical fundamentals through hands-on learning.",
     ],
-    technologies: ["Industrial Manufacturing", "Engineering Workflows", "Operations Discipline", "Analytical Problem-Solving", "Process Optimization"]
+    technologies: ["Industrial Operations", "Professional Discipline", "Engineering Fundamentals", "Analytical Problem-Solving"]
   }
 ];
 
@@ -483,6 +499,7 @@ export const SKILL_GROUPS: SkillGroup[] = [
     skills: [
       { name: "Python", level: "Production", percentage: 95 },
       { name: "TypeScript", level: "Production", percentage: 92 },
+      { name: "C / C++", level: "Advanced", percentage: 88 },
       { name: "JavaScript (ESNext)", level: "Production", percentage: 94 },
       { name: "SQL (PostgreSQL)", level: "Advanced", percentage: 88 },
       { name: "HTML5 / Semantic", level: "Advanced", percentage: 95 },
@@ -535,7 +552,8 @@ export const SKILL_GROUPS: SkillGroup[] = [
 export const TERMINAL_COMMANDS: Record<string, string> = {
   help: "Available commands:\n  whoami      - Display engineer credentials and summary\n  projects    - List all 4 production projects with metrics\n  paper       - Display published research on AI Bias and Fairness\n  hackathons  - Show hackathon victories and award highlights\n  experience  - List engineering internships and deliverables\n  skills      - Output full engineering skill matrix\n  stack       - Print core technical stack\n  contact     - Display contact channels and email\n  clear       - Clear terminal output\n  sudo hire   - Print hiring recommendation and instant contact",
   whoami: "Name: Kabir Singh Chadha\nRole: 2nd Year B.Tech CSE (AI/ML) @ SRMIST KTR, Chennai\nFocus: Intelligent Systems, Full-Stack Architecture, Ethical AI & Fairness\nPublished: 'Bias and Fairness in Artificial Intelligence: Methods and Mitigation Strategies'\nStatus: [ONLINE] Open for High-Impact Roles & Research",
-  experience: "1. H Nahata Power Private Limited (June 11, 2024 – June 21, 2024, New Delhi)\n   Role: Engineering Intern\n   • Solar power generation & energy management system optimizations\n   • Explored Big Data and AI techniques for energy modeling\n\n2. Gee Kay (2024, New Delhi)\n   Role: Industrial Trainee / Intern\n   • Industrial manufacturing and engineering workflows exposure\n   • Operational discipline, cross-team collaboration, and technical operations",
+  hackathons: "1. Hack and Beyond – Building Intelligent AI Applications (August 2026)\n   Award: Winner (1st Place)\n   Organizer: Dept of ECE, SRMIST in association with Ansnicore Solutions Pvt. Ltd.\n   Details: Awarded 1st place in AI innovation for developing intelligent AI applications under rapid prototyping constraints.\n\n2. Adobe Hackathon (2026)\n   Status: Round 2 Qualifier\n   Details: Successfully cleared Round 1 screening and qualified for Round 2 in Adobe's competitive hackathon track.\n\n3. Hack4Health Hackathon (2026)\n   Status: Participant (Awaiting Results)\n   Details: Developed an innovative software solution addressing healthcare delivery challenges; currently awaiting results.",
+  experience: "1. Ansnicore Solutions Pvt. Ltd. (September 10, 2026 – Present, Online)\n   Role: Software Engineering / AI Intern\n   • Contributing to intelligent AI solutions & software systems\n   • Analyzing requirements and building scalable technical features\n   • Applying core computer science and AI/ML principles\n\n2. H Nahata Power Private Limited (June 11, 2024 – June 21, 2024, New Delhi)\n   Role: Engineering Intern\n   • Worked on solar power generation and energy management solutions\n   • Optimized solar energy systems using control management strategies\n   • Proposed system efficiency improvements via Big Data and AI integration\n\n3. Gee Kay (2024, New Delhi - Offline)\n   Role: Industrial Trainee / Intern\n   • Gained practical exposure to real-world industrial operations\n   • Developed professional discipline and teamwork in industrial workflows\n   • Strengthened analytical and technical fundamentals through hands-on learning",
   stack: "FRONTEND & UI:       Next.js (App Router), React 19, TypeScript, Tailwind CSS, Lucide Icons\nBACKEND & APIS:      Python, FastAPI, Supabase (PostgreSQL, Realtime, RLS), Node.js, Streamlit\nMACHINE LEARNING/AI: Scikit-Learn, PyTorch, Ollama (LLaMA 3.2), Plotly, Pandas, NumPy\nSYSTEMS & TOOLS:     Git, Docker, Linux, C/C++, Embedded Microcontrollers",
   contact: "Email:    chadhakabir77@gmail.com\nGitHub:   https://github.com/KabirChadha (github.com/KabirChadha)\nLinkedIn: https://www.linkedin.com/in/kabir-singh-chadha-4b90a1363 (linkedin.com/in/kabir-singh-chadha)\nPaper:    https://doi.org/10.36676/jrps.v15.i3.1425\nLocation: New Delhi, India / Remote Available",
   "sudo hire": ">>> ACCESS GRANTED: HIGH-PRIORITY CANDIDATE <<<\nMatches requirements for: AI/ML Engineer, Full-Stack Architect, Quantitative Systems.\nDemonstrated capability in zero-leakage math pipelines, published academic research, and production hackathon wins.\nContact immediately: chadhakabir77@gmail.com"

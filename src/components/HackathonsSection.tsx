@@ -15,10 +15,10 @@ export const HackathonsSection: React.FC = () => {
             <span>// 03. COMPETITIVE_ACHIEVEMENTS</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold font-mono text-[#f4f4f6] tracking-tight">
-            HACKATHON PODIUM FINISHES
+            COMPETITIVE HACKATHONS
           </h2>
           <p className="text-sm sm:text-base text-[#9ba1b6] max-w-3xl">
-            High-velocity 24-48 hour engineering sprints delivering production-grade machine learning models, real-time distributed platforms, and societal impact prototypes under extreme constraints.
+            National hackathon wins, qualifications, and active engineering challenges delivering intelligent AI systems and healthcare prototypes under rapid prototyping constraints.
           </p>
         </div>
 
@@ -41,14 +41,14 @@ export const HackathonsSection: React.FC = () => {
 
                 {/* Hackathon Name & Project */}
                 <div>
-                  <h3 className="text-lg font-bold font-mono text-[#f4f4f6] group-hover:text-[#ff6b00] transition-colors">
+                  <h3 className="text-lg font-bold font-mono text-[#f4f4f6] group-hover:text-[#ff6b00] transition-colors leading-snug">
                     {win.hackathon}
                   </h3>
-                  <div className="text-xs font-mono text-[#ff7a00] mt-0.5">
-                    Track: {win.track}
+                  <div className="text-xs font-mono text-[#ff7a00] mt-1">
+                    {win.organizer}
                   </div>
                   <div className="text-xs font-mono text-[#71768c] mt-0.5">
-                    Project: <span className="text-[#d4d4d8] font-semibold">{win.projectTitle}</span>
+                    Focus: <span className="text-[#d4d4d8] font-semibold">{win.track}</span>
                   </div>
                 </div>
 

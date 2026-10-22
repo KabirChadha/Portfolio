@@ -1,15 +1,16 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Mail, Copy, Check, Send, Terminal, Sparkles, FileText, ArrowUpRight } from 'lucide-react';
+import { Mail, Copy, Check, Send, Terminal, AlertTriangle, CheckCircle2, ExternalLink, ArrowUpRight } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
 export const ContactSection: React.FC = () => {
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
-  const [statusMessage, setStatusMessage] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [statusFeedback, setStatusFeedback] = useState<string | null>(null);
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(PERSONAL_INFO.email);
@@ -17,27 +18,50 @@ export const ContactSection: React.FC = () => {
     setTimeout(() => setCopiedEmail(false), 2000);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formState.name || !formState.email || !formState.message) {
-      setStatusMessage('ERROR: Please complete all terminal parameters before dispatching.');
+      setSubmitStatus('error');
+      setStatusFeedback('[ERROR 400]: Incomplete parameters. Name, email, and message body are required.');
       return;
     }
 
     setIsSubmitting(true);
-    setStatusMessage('TRANSMITTING: Establishing encrypted socket connection...');
+    setSubmitStatus('idle');
+    setStatusFeedback(null);
 
-    setTimeout(() => {
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: '6fc77c28-3b97-46a5-beb6-8d2c0cfaf681',
+          name: formState.name,
+          email: formState.email,
+          message: formState.message,
+          subject: `New Portfolio Inquiry from ${formState.name}`,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && (data.success || response.status === 200)) {
+        setSubmitStatus('success');
+        setStatusFeedback('[200 OK]: Packet delivered directly to chadhakabir77@gmail.com. Response latency acknowledged.');
+        setFormState({ name: '', email: '', message: '' });
+      } else {
+        throw new Error(data.message || 'API rejected transmission');
+      }
+    } catch (err) {
+      console.error('Web3Forms dispatch error:', err);
+      setSubmitStatus('error');
+      setStatusFeedback('[ERROR 500]: Dispatch failed. Fallback: email directly at chadhakabir77@gmail.com.');
+    } finally {
       setIsSubmitting(false);
-      setStatusMessage(
-        `SUCCESS: Message packet acknowledged from ${formState.email}. Opening email client fallback...`
-      );
-      // Fallback mailto
-      const subject = encodeURIComponent(`Portfolio Inquiry from ${formState.name}`);
-      const body = encodeURIComponent(formState.message + `\n\nContact Email: ${formState.email}`);
-      window.open(`mailto:${PERSONAL_INFO.email}?subject=${subject}&body=${body}`, '_blank');
-      setFormState({ name: '', email: '', message: '' });
-    }, 900);
+    }
   };
 
   return (
@@ -133,6 +157,7 @@ export const ContactSection: React.FC = () => {
               <div className="p-3 rounded-lg bg-[#080910] border border-[#171a2a] text-xs font-mono text-[#71768c] space-y-1">
                 <div>LOCATION: <span className="text-[#d4d4d8]">{PERSONAL_INFO.location}</span></div>
                 <div>TIMEZONE: <span className="text-[#d4d4d8]">UTC+05:30 (IST)</span></div>
+                <div>DISPATCH_API: <span className="text-[#ff6b00]">WEB3FORMS_ENCRYPTED</span></div>
                 <div>RESPONSE_TIME: <span className="text-[#10b981]">&lt; 12 Hours Guaranteed</span></div>
               </div>
             </div>
@@ -144,7 +169,7 @@ export const ContactSection: React.FC = () => {
               <div className="flex items-center justify-between px-5 py-3 bg-[#0d0f1a] border-b border-[#181b2a] font-mono text-xs">
                 <span className="text-[#ff6b00] font-bold flex items-center gap-2">
                   <Terminal className="w-3.5 h-3.5" />
-                  POST /api/v1/dispatch_inquiry
+                  POST https://api.web3forms.com/submit
                 </span>
                 <span className="text-[#71768c] text-[11px]">
                   CONTENT-TYPE: JSON
@@ -194,19 +219,54 @@ export const ContactSection: React.FC = () => {
                   ></textarea>
                 </div>
 
-                {statusMessage && (
-                  <div className="p-3 rounded bg-[#06070c] border border-[#ff6b00]/40 font-mono text-xs text-[#10b981]">
-                    {statusMessage}
+                {/* Status Feedback Card */}
+                {statusFeedback && (
+                  <div
+                    className={`p-3.5 rounded-lg border font-mono text-xs space-y-2 ${
+                      submitStatus === 'success'
+                        ? 'bg-[#051c0f] border-[#10b981]/50 text-[#10b981]'
+                        : 'bg-[#1f0a0a] border-[#ef4444]/50 text-[#f87171]'
+                    }`}
+                  >
+                    <div className="flex items-start gap-2">
+                      {submitStatus === 'success' ? (
+                        <CheckCircle2 className="w-4 h-4 text-[#10b981] shrink-0 mt-0.5" />
+                      ) : (
+                        <AlertTriangle className="w-4 h-4 text-[#ef4444] shrink-0 mt-0.5" />
+                      )}
+                      <span className="leading-relaxed">{statusFeedback}</span>
+                    </div>
+
+                    {submitStatus === 'error' && (
+                      <div className="pt-2 border-t border-[#ef4444]/20 flex flex-wrap items-center gap-2">
+                        <a
+                          href="https://mail.google.com/mail/?view=cm&fs=1&to=chadhakabir77@gmail.com"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-[#ef4444]/20 hover:bg-[#ef4444] text-[#f4f4f6] hover:text-black border border-[#ef4444]/50 text-xs font-bold transition-all"
+                        >
+                          <span>Open in Gmail Web</span>
+                          <ExternalLink className="w-3 h-3" />
+                        </a>
+                        <a
+                          href="mailto:chadhakabir77@gmail.com"
+                          className="inline-flex items-center gap-1 px-3 py-1.5 rounded bg-[#10121d] hover:bg-[#202538] text-[#d4d4d8] text-xs transition-colors"
+                        >
+                          <Mail className="w-3 h-3" />
+                          <span>Mail App</span>
+                        </a>
+                      </div>
+                    )}
                   </div>
                 )}
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-3 rounded-lg bg-[#ff6b00] hover:bg-[#ff7a00] text-black font-mono font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all shadow-[0_0_20px_rgba(255,107,0,0.35)] cursor-pointer disabled:opacity-50"
+                  className="w-full py-3 rounded-lg bg-[#ff6b00] hover:bg-[#ff7a00] text-black font-mono font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all shadow-[0_0_20px_rgba(255,107,0,0.35)] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <Send className="w-4 h-4" />
-                  <span>{isSubmitting ? 'DISPATCHING PACKET...' : 'DISPATCH MESSAGE PACKET'}</span>
+                  <span>{isSubmitting ? '> DISPATCHING_PACKET...' : 'DISPATCH MESSAGE PACKET'}</span>
                 </button>
               </form>
             </div>
